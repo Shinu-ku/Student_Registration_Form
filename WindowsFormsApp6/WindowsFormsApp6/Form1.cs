@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +15,8 @@ namespace WindowsFormsApp6
         public Form1()
         {
             InitializeComponent();
+            button1.Click += button1_Click; // Clear button
+            //button2.Click += button2_Click; // Submit button
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -22,6 +24,18 @@ namespace WindowsFormsApp6
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
+
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+
+            comboBox1.SelectedIndex = -1;
+
+            dateTimePicker1.Value = DateTime.Today;
         }
 
         private void label1_Click(object sender, EventArgs e)
